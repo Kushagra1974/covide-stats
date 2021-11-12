@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { Container } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+
+import Cards from './Components/Cards/Cards';
+import Charts from './Components/Charts/Charts';
+import CountryPicker from './Components/CountryPicker/CountryPicker';
+
+import { StateProvider } from "./stateProvider/StateProvider"
+
+
+const useStyles = makeStyles({
+  center: {
+    textAlign: "center"
+  },
+  img: {
+    margin: "50px"
+  }
+})
+
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider>
+      <div className="App">
+        <Container className={classes.center}>
+          <img className={classes.img} src="image.png" alt="hehehe image thi yha par" />
+          <Cards ></Cards>
+          <CountryPicker></CountryPicker>
+          <Charts></Charts>
+        </Container>
+      </div >
+    </StateProvider>
   );
 }
 
