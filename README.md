@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Covid-Stats.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+1) shows number of deaths , recovered , infected people in a country in a form of a graph.
+2) Can search the covid related data from a specific country.
 
 ## Available Scripts
 
